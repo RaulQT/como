@@ -74,6 +74,10 @@ add_message_files(
    std_msgs
  )
 
+catkin_package(
+    CATKIN_DEPENDS message_runtime
+)
+
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
 ################################################

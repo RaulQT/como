@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="keyboard" type="keyboard" name="keyboard" output="screen" />
+
+    <node pkg="sim" type="keyboard_manual" name="keyboard_manual" output="screen" />
+
+</launch>
