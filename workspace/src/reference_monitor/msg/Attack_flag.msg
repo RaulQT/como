@@ -1,0 +1,1 @@
+bool attack_flag
