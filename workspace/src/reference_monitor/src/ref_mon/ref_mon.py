@@ -174,20 +174,6 @@ def main():
 		angle_radian = line_data.angle_radian
 		car_vel_est.update_data(vel_est_encoders)
 		car_vel = car_vel_est.calc_vel()
-		
-		#print("Angle Rotation: ", angle_radian)
-		#print("Line Position: ", line_pos_x)
-		#print("Car Vel: ", car_vel)	
-		#print("Steering Angle: ", str_cmd)
-		#print()
-		
-		
-		
-		
-		
-
-
-	
 		     
 		gain = 0.2
 		steering = gain * (str_cmd * (np.pi/180.0) - np.pi/2)               #data: 132.012803853 convert to radiasn
@@ -227,8 +213,6 @@ def main():
 		#print("residual: ",residual)
 
 		endTime = Decimal('{0:f}'.format(time.time()*1000000))
-		#f.write("%s\n" % str(endTime-startTime))
-		#f.write("%s\n" % str(endTime-startTime))
 
 		
 		
@@ -243,7 +227,6 @@ def main():
 		
 		
 		f.write("%f %f %f %f %f %f %f %f %f %f %f\n" %(endTime, y[0], y[1], x_hat[0], x_hat[1], velocity, steering, abs(residual[0]),abs(residual[1]), output[0], output[1]))
-		#print (endTime-startTime)
 		rate.sleep()
 
 
